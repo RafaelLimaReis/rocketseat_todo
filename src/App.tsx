@@ -28,12 +28,29 @@ function App() {
     setTasks((state) => [...state, newTask]);
   }
 
+  function toggleStatusTask(id: string, value: boolean) {
+    const newStatusTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return {...task, isChecked: value};
+      }
+      return {...task};
+    });
+
+    setTasks(newStatusTasks);
+  }
+
+  function deleteTask(id: string) {
+    const updatedTaks = tasks.filter((task) => task.id !== id);
+
+    setTasks(updatedTaks);
+  }
+
   return (
     <main>
       <Header />
       <section className={styles.content}>
         <FormTask onCreateTask={createTask} />
-        <List tasks={tasks} />
+        <List tasks={tasks} onToggleStatusTask={toggleStatusTask} onDeleteTask={deleteTask} />
       </section>
     </main>
   )

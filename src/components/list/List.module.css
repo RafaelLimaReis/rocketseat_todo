@@ -68,3 +68,76 @@
 .listContainer .emptyList span {
     font-weight: 400;
 }
+
+.taskContent {
+    display: flex;
+    gap: .75rem;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-400);
+    background: var(--gray-500);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.taskContent + .taskContent {
+    margin-top: .75rem;
+}
+
+.taskContent label {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    cursor: pointer;
+}
+
+.taskContent input[type="checkbox"] {
+    display: none;
+}
+
+.taskContent .taskIsChecked span svg {
+    border: 2px solid var(--purple-dark);
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.taskContent span:first-of-type {
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.taskContent .taskIsNotChecked span:first-of-type {
+    border: 2px solid var(--blue);
+}
+
+.taskContent .taskIsChecked span:first-of-type {
+    background: var(--purple-dark);
+}
+
+
+.taskContent span:last-of-type {
+    flex: 1;
+    color: var(--gray-100);
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    user-select: none;
+}
+
+.taskContent .taskIsChecked span:last-of-type {
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.taskContent button {
+    color: var(--gray-300);
+    background: transparent;
+    border: none;
+    height: 1.25rem;
+    cursor: pointer;
+}
