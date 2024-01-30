@@ -1,0 +1,37 @@
+.taskForm {
+    display: flex;
+    margin-top: -1.6875rem;
+}
+
+.taskForm > input {
+    padding: 1rem;
+    flex: 1;
+
+    border-radius: 8px;
+    border: 1px solid var(--gray-700);
+    background: var(--gray-500);
+
+    color: var(--gray-300);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    width: 100%;
+}
+
+.taskForm button[type='submit'] {
+    border-radius: 8px;
+    background: var(--blue-dark);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    margin-left: .5rem;
+
+    display: flex;
+    align-items: center;
+    color: var(--gray-100);
+}
+
+.taskForm button[type='submit'] svg {
+    margin-left: .2rem;
+}
