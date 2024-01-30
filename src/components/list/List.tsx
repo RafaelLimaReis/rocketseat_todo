@@ -1,7 +1,6 @@
 import { Check, ClipboardText, Trash } from 'phosphor-react';
 import { InterfaceTask } from '../../App';
 import style from './List.module.css';
-import { MouseEvent } from 'react';
 
 interface InterfaceListProps {
     tasks: InterfaceTask[],
